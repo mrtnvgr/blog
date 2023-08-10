@@ -1,0 +1,55 @@
+$dark-background: none !default;
+$dark-foreground: none !default;
+$dark-foreground-pale: none !default;
+
+$dark-primary: none !default;
+$dark-red: none !default;
+$dark-blue: none !default;
+$dark-sky: $dark-blue !default;
+$dark-purple: none !default;
+$dark-green: none !default;
+$dark-yellow: none !default;
+
+
+$light-background: none !default;
+$light-foreground: none !default;
+$light-foreground-pale: none !default;
+
+$light-primary: $dark-primary !default;
+$light-red: $dark-red !default;
+$light-blue: $dark-blue !default;
+$light-sky: $dark-sky !default;
+$light-purple: $dark-purple !default;
+$light-green: $dark-green !default;
+$light-yellow: $dark-yellow !default;
+
+
+body {
+  --primary-color: #{$light-primary};
+  --primary-pale-color: #{$light-primary}20;
+  --text-color: #{$light-foreground};
+  --text-pale-color: #{$light-foreground-pale};
+  --bg-color: #{$light-background};
+
+  --callout-note-color: #{$light-blue};
+  --callout-important-color: #{$light-purple};
+  --callout-warning-color: #{$light-yellow};
+  --callout-alert-color: #{$light-red};
+  --callout-question-color: #{$light-sky};
+  --callout-tip-color: #{$light-green};
+
+  &.dark {
+    --primary-color: #{$dark-primary};
+    --primary-pale-color: #{$dark-primary}20;
+    --text-color: #{$dark-foreground};
+    --text-pale-color: #{$dark-foreground-pale};
+    --bg-color: #{$dark-background};
+
+    --callout-note-color: #{$dark-blue};
+    --callout-important-color: #{$dark-purple};
+    --callout-warning-color: #{$dark-yellow};
+    --callout-alert-color: #{$dark-red};
+    --callout-question-color: #{$dark-sky};
+    --callout-tip-color: #{$dark-green};
+  }
+}

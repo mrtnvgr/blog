@@ -1,0 +1,17 @@
+@use 'colors' with (
+  $dark-background: #202124,
+  $dark-foreground: #9197a5,
+  $dark-foreground-pale: #5d6470,
+
+  $light-background: #ffffff,
+  $light-foreground: #3c4043,
+  $light-foreground-pale: #a0a9bf,
+
+  $dark-primary: #6d9bff,
+  $dark-red: #ff6868,
+  $dark-blue: #4890fc,
+  $dark-sky: #4e95b9,
+  $dark-purple: #b080ff,
+  $dark-green: #41c885,
+  $dark-yellow: #e4a135,
+);

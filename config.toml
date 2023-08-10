@@ -1,0 +1,50 @@
+base_url = "https://unixis.fun"
+title = "UNIX/POSIX/UNIX-LIKE/LSB is fun"
+description = ""
+default_language = "en"
+output_dir = "public"
+compile_sass = true
+minify_html = true
+build_search_index = false
+generate_feed = true
+feed_filename = "feed.xml"
+
+[markdown]
+highlight_code = true
+extra_syntaxes_and_themes = ["syntaxes"]
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "one-dark", filename = "onedark-syntax.css" },
+  { theme = "dracula", filename = "dracula-syntax.css" },
+  { theme = "nord", filename = "nord-syntax.css" },
+  { theme = "catppuccin-mocha", filename = "catppuccin-syntax.css" },
+]
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = false
+
+[slugify]
+paths = "on"
+anchors = "on"
+
+#=========================================================================================
+
+[extra]
+
+name = "Egor Martynov"
+id = "mrtnvgr"
+bio = "TODO: bio"
+avatar = "img/avatar.svg"
+links = [
+    { name = "GitHub", icon = "github", url = "https://github.com/mrtnvgr" },
+    { name = "Telegram", icon = "telegram", url = "https://t.me/mrtnvgr" },
+    { name = "Email", icon = "email", url = "mailto:root@unixis.fun" },
+]
+
+default_theme = "catppuccin"
+
+nav_separator = "::"
+display_id = true
+date_format = "%e %B %Y"

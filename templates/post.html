@@ -1,0 +1,64 @@
+{% extends "_base.html" %}
+
+{% block page %}post{% endblock page %}
+{% block lang -%}
+{% set section = get_section(path="blog/_index.md", metadata_only=true) %}
+{%- if page.extra.lang %}{{page.extra.lang}}{% elif section.extra.lang %}{{section.extra.lang}}{% else %}{{page.lang}}{% endif -%}
+{%- endblock lang %}
+{% block title %}{{ page.title }}{% endblock title %}
+{% block desc %}{% if page.summary %}{{ page.summary }}{% endif %}{% endblock desc %}
+
+{% block head %}
+{% if page.extra.math %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      throwOnError: false
+    });
+  });
+</script>
+{% endif %}
+{% endblock head %}
+
+{% block content %}
+{% include "_header.html" %}
+<div id="post-wrapper">
+  <div id="blank"></div>
+  <main>
+    <div id="top"></div>
+    <article>
+      <h1>{{ page.title }}</h1>
+
+      <div id="post-info">
+        <div id="date">
+          <span id="publish">{{ page.date | date(format=config.extra.date_format) }}</span>
+          {% if page.updated and page.updated != page.date -%}
+          <span>Updated on <span id="updated">{{ page.updated | date(format=config.extra.date_format) }}</span></span>
+          {% endif -%}
+        </div>
+      </div>
+
+      {{ page.content | safe }}
+    </article>
+  </main>
+</div>
+{% endblock content %}
+
+{% block script %}
+<script src="/js/lightense.min.js"></script>
+{% if page.extra.mermaid %}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+{% endif %}
+{% endblock script %}

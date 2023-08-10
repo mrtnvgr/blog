@@ -1,0 +1,31 @@
+@use 'colors' with (
+  // Mocha
+  $dark-background: #1e1e2e, // base
+  $dark-foreground: #cdd6f4, // text
+  $dark-foreground-pale: #6c7086, // overlay0
+
+  // Latte
+  $light-background: #eff1f5, // base
+  $light-foreground: #4c4f69, // text
+  $light-foreground-pale: #9ca0b0, // overlay0
+
+  $dark-primary: #b4befe, // lavender
+  $dark-red: #f38ba8,
+  $dark-blue: #89b4fa,
+  $dark-sky: #74c7ec, // sapphire
+  $dark-purple: #cba6f7, // mauve
+  $dark-green: #a6e3a1,
+  $dark-yellow: #f9e2af,
+
+  $light-primary: #7287fd, // lavender
+  $light-red: #d20f39,
+  $light-blue: #1e66f5,
+  $light-sky: #04a5e5, // sky
+  $light-purple: #8839ef, // mauve
+  $light-green: #40a02b,
+  $light-yellow: #df8e1d,
+);
+
+.z-code {
+  background-color: #313244 !important; // surface0
+}
