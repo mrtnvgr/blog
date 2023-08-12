@@ -1,0 +1,20 @@
+@use 'colors' with (
+  $dark-background: #141b1e,
+  $dark-foreground: #dadada,
+  $dark-foreground-pale: #b3b9b8,
+
+  $light-background: #dadada,
+  $light-foreground: #141b1e,
+  $light-foreground-pale: #27343a,
+
+  $dark-primary: #8ccf7e,
+  $dark-red: #e57474,
+  $dark-blue: #67b0e8,
+  $dark-purple: #c47fd5, // magenta
+  $dark-green: #8ccf7e,
+  $dark-yellow: #e5c76b,
+);
+
+.z-code {
+  background-color: #232a2d !important;
+}

@@ -3,6 +3,8 @@ const themeSwitch = document.querySelector('#theme-switch');
 const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 if (!localStorage.getItem("theme") && preferDark.matches) toggleTheme("dark");
+if (localStorage.getItem("theme") == "dark") toggleTheme("dark");
+
 themeToggle.addEventListener('click', () => toggleTheme(localStorage.getItem("theme") == "dark" ? "light" : "dark"));
 themeSwitch.addEventListener('click', () => switchTheme());
 preferDark.addEventListener("change", e => toggleTheme(e.matches ? "dark" : "light"));
@@ -14,7 +16,6 @@ function toggleTheme(theme) {
   themeToggle.innerHTML = theme == "dark" ? themeToggle.dataset.sunIcon : themeToggle.dataset.moonIcon;
   toggleGiscusTheme(theme);
 }
-if (localStorage.getItem("theme") == "dark") toggleTheme("dark");
 
 function switchTheme() {
   let name = localStorage.getItem("scheme");
@@ -32,6 +33,9 @@ function switchTheme() {
       break;
     case "catppuccin":
       name = "everforest";
+      break;
+    case "everforest":
+      name = "everblush";
       break;
     default:
       name = "onedark";
