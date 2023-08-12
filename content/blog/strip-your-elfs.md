@@ -5,7 +5,7 @@ date = 2023-08-10
 
 Not many people know that executables can be much smaller if they are "stripped". Stripping means removing debug information, relocations and other pretty much _useless_ for public release builds metadata.
 
-## `strip` utility
+# `strip` utility
 
 If you have a binary file, you can strip it using the `strip` utility:
 
@@ -15,8 +15,6 @@ Example:
 $ strip -s foo
 ```
 
-<br>
-
 ### Tests
 
 | Software | From [crates.io](https://crates.io) | Stripped |
@@ -24,7 +22,7 @@ $ strip -s foo
 | selene   | 12MB                                | 7.5MB    |
 | ripgrep  | 35MB                                | 4.7MB    |
 
-## Rust
+# Rust
 
 Cargo is capable of performing stripping as well as some other size optimizations for your project builds.
 
@@ -42,7 +40,7 @@ codegen-units = 1 # **WARN**: disables parallel compilation
 "Enable strip in release mode by default" is proposed in [#4122](https://github.com/rust-lang/cargo/issues/4122).
 {% end %}
 
-## Cons
+# Cons
 
 However, "stripping" is not the solution for everyone:
 
