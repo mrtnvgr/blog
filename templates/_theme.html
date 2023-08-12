@@ -1,13 +1,13 @@
 <script>
-  const loadTheme = function() {
+  function loadTheme() {
     let name = localStorage.getItem("scheme");
     if (name === null) {
       name = "{{ config.extra.default_theme }}";
     }
 
-    document.head.innerHTML += `<link id="scheme" rel="stylesheet" href="/${name}.css" type="text/css"/>`;
-    document.head.innerHTML += `<link id="syntax" rel="stylesheet" href="/${name}-syntax.css" type="text/css"/>`;
-  };
+    document.head.innerHTML += `<link id="scheme" rel="preload stylesheet" href="/${name}.css" as="style"/>`;
+    document.head.innerHTML += `<link id="syntax" rel="preload stylesheet" href="/${name}-syntax.css" as="style"/>`;
+  }
 
   document.onload = loadTheme();
 </script>

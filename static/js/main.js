@@ -1,5 +1,3 @@
-/* dark mode */
-
 const themeToggle = document.querySelector('#theme-toggle');
 const themeSwitch = document.querySelector('#theme-switch');
 const preferDark = window.matchMedia("(prefers-color-scheme: dark)");

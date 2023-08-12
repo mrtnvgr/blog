@@ -3,6 +3,7 @@
 <html lang="{% block lang %}{% endblock lang %}">
 
 <head>
+  {% include "_theme.html" %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
@@ -12,7 +13,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   {% include "_custom_font.html" %}
-  {% include "_theme.html" %}
   <link rel="stylesheet" href="/main.css">
   {% block head %}{% endblock head %}
 </head>
