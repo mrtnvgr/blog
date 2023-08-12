@@ -14,12 +14,7 @@ function toggleTheme(theme) {
   themeToggle.innerHTML = theme == "dark" ? themeToggle.dataset.sunIcon : themeToggle.dataset.moonIcon;
   toggleGiscusTheme(theme);
 }
-
-function updateSwitch() {
-  const theme = localStorage.getItem("theme") || (preferDark.matches ? "dark" : "light");
-  themeToggle.innerHTML = theme == "dark" ? themeToggle.dataset.sunIcon : themeToggle.dataset.moonIcon;
-}
-window.onload = updateSwitch();
+if (localStorage.getItem("theme") == "dark") toggleTheme("dark");
 
 function switchTheme() {
   let name = localStorage.getItem("scheme");
