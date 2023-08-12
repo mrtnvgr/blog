@@ -46,5 +46,4 @@ links = [
 default_theme = "catppuccin"
 
 nav_separator = "::"
-display_id = true
 date_format = "%e %B %Y"
