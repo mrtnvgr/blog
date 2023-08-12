@@ -18,6 +18,7 @@ highlight_themes_css = [
   { theme = "dracula", filename = "dracula-syntax.css" },
   { theme = "nord", filename = "nord-syntax.css" },
   { theme = "catppuccin-mocha", filename = "catppuccin-syntax.css" },
+  { theme = "everforest", filename = "everforest-syntax.css" },
 ]
 render_emoji = false
 external_links_target_blank = false

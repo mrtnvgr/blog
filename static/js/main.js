@@ -30,6 +30,9 @@ function switchTheme() {
     case "nord":
       name = "catppuccin";
       break;
+    case "catppuccin":
+      name = "everforest";
+      break;
     default:
       name = "onedark";
   }
