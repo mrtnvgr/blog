@@ -15,6 +15,12 @@ function toggleTheme(theme) {
   toggleGiscusTheme(theme);
 }
 
+function updateSwitch() {
+  const theme = localStorage.getItem("theme") || (preferDark.matches ? "dark" : "light");
+  themeToggle.innerHTML = theme == "dark" ? themeToggle.dataset.sunIcon : themeToggle.dataset.moonIcon;
+}
+window.onload = updateSwitch();
+
 function switchTheme() {
   let name = localStorage.getItem("scheme");
 
