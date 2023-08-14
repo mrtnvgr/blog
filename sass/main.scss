@@ -568,11 +568,10 @@ body.post {
     blockquote.callout {
       line-height: var(--paragraph-line-height);
       margin-bottom: 20px;
-      border: 2px solid;
-      border-radius: 0px;
+      border: 2px solid var(--primary-color);
       padding: 6px 12px;
       display: flex;
-      gap: 10px;
+      gap: 12px;
 
       .icon {
         height: 1.75em;
@@ -585,7 +584,7 @@ body.post {
           margin: 0;
 
           +p {
-            margin-top: 0.5em;
+            margin: 0.2em 0 0.5em;
           }
         }
       }
