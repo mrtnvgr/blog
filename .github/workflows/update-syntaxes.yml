@@ -1,0 +1,53 @@
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@main
+
+      - name: "Install json2tm"
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: json2tm 
+
+      - name: "Prepare"
+        run: |
+          mkdir vscode
+          cd vscode
+
+      - name: "Download VSCode Themes"
+        run: |
+          wget https://github.com/one-dark/vscode-one-dark-theme/releases/latest/download/mskelton.one-dark-theme.vsix -O onedark.vsix
+          unzip -j onedark.vsix extension/themes/one-dark.json
+          mv one-dark.json onedark.json
+          rm onedark.vsix
+
+          wget https://github.com/dracula/visual-studio-code/releases/latest/download/dracula.vsix
+          unzip -j dracula.vsix extension/theme/dracula.json
+          rm dracula.vsix
+
+          wget https://raw.githubusercontent.com/nordtheme/visual-studio-code/develop/themes/nord-color-theme.json -O nord.json
+          wget https://raw.githubusercontent.com/catppuccin/vscode/compiled/mocha.json -O catppuccin-mocha.json
+          wget https://raw.githubusercontent.com/sainnhe/everforest-vscode/master/themes/everforest-dark.json -O everforest.json
+          wget https://raw.githubusercontent.com/Everblush/vscode/master/themes/everblush-color-theme.json -O everblush.json
+
+      - name: "Convert to .tmTheme"
+        run: |
+          for file in *.json; do
+              file=`basename $file .json`
+              json2tm "${file}.json" "${file}.tmTheme"
+          done
+
+      - name: "Commit updated syntaxes"
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore(ci): update syntaxes"
+          add: "syntaxes/*.tmTheme"
+          default_author: user_info
+          committer_name: GitHub Actions
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com

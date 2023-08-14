@@ -14,7 +14,7 @@ highlight_code = true
 extra_syntaxes_and_themes = ["syntaxes"]
 highlight_theme = "css"
 highlight_themes_css = [
-  { theme = "one-dark", filename = "onedark-syntax.css" },
+  { theme = "onedark", filename = "onedark-syntax.css" },
   { theme = "dracula", filename = "dracula-syntax.css" },
   { theme = "nord", filename = "nord-syntax.css" },
   { theme = "catppuccin-mocha", filename = "catppuccin-syntax.css" },
