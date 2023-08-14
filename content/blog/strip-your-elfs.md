@@ -1,6 +1,7 @@
 +++
 title = "Strip your ELFs"
 date = 2023-08-10
+updated = 2023-08-14
 +++
 
 Not many people know that executables can be much smaller if they are "stripped". Stripping means removing debug information, relocations and other pretty much _useless_ for public release builds metadata.
@@ -27,12 +28,21 @@ $ strip -s foo
 Cargo is capable of performing stripping as well as some other size optimizations for your project builds.
 
 **Cargo.toml**
+
 ```toml
 [profile.release]
 strip = true
 lto = true # Optimizations at the linker stage
 codegen-units = 1 # **WARN**: disables parallel compilation
 ```
+
+### Tests
+
+| Mode                        | Size  | Compile time |
+| :-------------------------- | ----- | ------------ |
+| Default `--release` profile | 5.0MB | 14.33s       |
+| Stripped                    | 944KB | 12.80s       |
+| All optimizations           | 784KB | 20.42s       |
 
 <br>
 
