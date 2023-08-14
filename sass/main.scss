@@ -449,7 +449,7 @@ body.post {
       color: var(--text-pale-color);
     }
 
-    p>code {
+    p>code, td>code, th>code {
       font-family: var(--code-font);
       font-size: 0.8em;
       padding: 1px 6px;
