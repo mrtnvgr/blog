@@ -65,4 +65,31 @@ function initGiscusTheme() {
 if (document.body.classList.contains('post')) {
   /* img lightense */
   window.addEventListener("load", () => Lightense("article img", { background: 'rgba(43, 43, 43, 0.19)' }));
+
+  /* code copy button */
+  const addCopyBtns = () => {
+    const cfg = document.querySelector('#copy-cfg');
+    if (!cfg) return;
+    const copyIcon = cfg.dataset.copyIcon;
+    const checkIcon = cfg.dataset.checkIcon;
+    document.querySelectorAll('pre').forEach(block => {
+      if (block.classList.contains('mermaid')) return;
+      const wrapper = document.createElement('div');
+      wrapper.className = 'code-block';
+      const btn = document.createElement('button');
+      btn.className = 'copy';
+      btn.ariaLabel = 'copy';
+      btn.innerHTML = copyIcon;
+      btn.addEventListener('click', () => {
+        navigator.clipboard.writeText(block.textContent).then(() => {
+          btn.innerHTML = checkIcon;
+          setTimeout(() => btn.innerHTML = copyIcon, 2000);
+        });
+      });
+      wrapper.appendChild(block.cloneNode(true));
+      wrapper.appendChild(btn);
+      block.replaceWith(wrapper);
+    });
+  };
+  addCopyBtns();
 }

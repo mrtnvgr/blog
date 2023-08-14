@@ -34,7 +34,10 @@
 <div id="post-wrapper">
   <div id="blank"></div>
   <main>
-    <div id="top"></div>
+    {% set copy_icon = load_data(path="static/icon/copy.svg") %}
+    {% set check_icon = load_data(path="static/icon/check.svg") %}
+    <div id="copy-cfg" style="display: none;" data-copy-icon="{{ copy_icon }}" data-check-icon="{{ check_icon }}"></div>
+
     <article>
       <h1>{{ page.title }}</h1>
 
