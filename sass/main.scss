@@ -343,11 +343,11 @@ body.post {
   }
 
   #blank {
-    width: calc((100% - var(--main-max-width))/2);
+    flex-grow: 1;
+    flex-basis: 0;
   }
 
   main {
-    width: 100%;
     max-width: var(--main-max-width);
   }
 
