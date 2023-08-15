@@ -13,6 +13,7 @@
       {% for post in section.pages %}
       <a class="post" href="{{ post.permalink }}">
         <span>{{ post.title }}</span>
+        <span class="line"></span>
         <span class="date">{{ post.date | date(format=config.extra.date_format) }}</span>
       </a>
       {% endfor %}
