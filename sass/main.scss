@@ -517,15 +517,20 @@ body.post {
 
       button.copy {
         position: absolute;
-        right: 6px;
-        top: 8px;
+        right: 8px;
+        top: 10px;
         width: 28px;
         height: 28px;
         padding: 4px;
         cursor: pointer;
         background: transparent;
-        color: #aeb7caa1;
         border: none;
+        color: var(--text-pale-color);
+
+        &:hover {
+          color: var(--primary-color);
+        }
+
         svg {
           width: 20px;
           height: 20px;
