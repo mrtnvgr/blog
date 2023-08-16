@@ -35,6 +35,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-y: overlay;
 }
 
 @media screen and (min-width: 425px) {
