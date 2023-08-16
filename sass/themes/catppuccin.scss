@@ -1,4 +1,6 @@
 @use 'colors' with (
+  $theme: "catppuccin",
+
   // Mocha
   $dark-background: #1e1e2e, // base
   $dark-foreground: #cdd6f4, // text
@@ -26,6 +28,8 @@
   $light-yellow: #df8e1d,
 );
 
-.z-code {
-  background-color: #313244 !important; // surface0
+body.catppuccin {
+  .z-code {
+    background-color: #313244 !important; // surface0
+  }
 }

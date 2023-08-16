@@ -1,4 +1,6 @@
 @use 'colors' with (
+  $theme: "onedark",
+
   $dark-background: #202124,
   $dark-foreground: #9197a5,
   $dark-foreground-pale: #5d6470,

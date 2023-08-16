@@ -1,4 +1,6 @@
 @use 'colors' with (
+  $theme: "everforest",
+
   $dark-background: #1e2326, // bg_dim
   $dark-foreground: #d3c6aa,
   $dark-foreground-pale: #9da9a0, // gray2

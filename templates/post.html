@@ -9,6 +9,11 @@
 {% block desc %}{% if page.summary %}{{ page.summary }}{% endif %}{% endblock desc %}
 
 {% block head %}
+<script>
+  const name = localStorage.getItem("scheme") ?? "{{ config.extra.default_theme }}";
+  document.head.innerHTML += `<link id="syntax" rel="stylesheet" href="/${name}-syntax.css"/>`;
+</script>
+
 {% if page.extra.math %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>

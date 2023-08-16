@@ -1,4 +1,6 @@
 @use 'colors' with (
+  $theme: "dracula",
+
   $dark-background: #21222c,
   $dark-foreground: #f8f8f2,
   $dark-foreground-pale: #626784,

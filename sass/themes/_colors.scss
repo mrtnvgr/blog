@@ -1,3 +1,5 @@
+$theme: none !default;
+
 $dark-background: none !default;
 $dark-foreground: none !default;
 $dark-foreground-pale: none !default;
@@ -9,7 +11,6 @@ $dark-sky: $dark-blue !default;
 $dark-purple: none !default;
 $dark-green: none !default;
 $dark-yellow: none !default;
-
 
 $light-background: none !default;
 $light-foreground: none !default;
@@ -23,8 +24,7 @@ $light-purple: $dark-purple !default;
 $light-green: $dark-green !default;
 $light-yellow: $dark-yellow !default;
 
-
-body {
+body.#{$theme} {
   --primary-color: #{$light-primary};
   --primary-pale-color: #{$light-primary}20;
   --text-color: #{$light-foreground};

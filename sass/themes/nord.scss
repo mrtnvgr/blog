@@ -1,4 +1,6 @@
 @use 'colors' with (
+  $theme: "nord",
+
   $dark-background: #2e3440,
   $dark-foreground: #eceff4,
   $dark-foreground-pale: #4c566a,
@@ -16,6 +18,8 @@
   $dark-yellow: #ebcb8b,
 );
 
-.z-code {
-  background-color: #3b4252 !important;
+body.nord {
+  .z-code {
+    background-color: #3b4252 !important;
+  }
 }

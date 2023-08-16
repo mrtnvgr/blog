@@ -1,5 +1,6 @@
 const themeToggle = document.querySelector('#theme-toggle');
 const themeSwitch = document.querySelector('#theme-switch');
+const syntaxCSS = document.querySelector("link#syntax");
 const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 if (!localStorage.getItem("theme") && preferDark.matches) toggleTheme("dark");
@@ -10,15 +11,16 @@ themeSwitch.addEventListener('click', () => switchTheme());
 preferDark.addEventListener("change", e => toggleTheme(e.matches ? "dark" : "light"));
 
 function toggleTheme(theme) {
-  if (theme == "dark") document.body.classList.add('dark');
-  else document.body.classList.remove('dark');
-  localStorage.setItem("theme", theme);
+  if (theme == "dark") document.body.classList.add('dark'); else document.body.classList.remove('dark');
   themeToggle.innerHTML = theme == "dark" ? themeToggle.dataset.sunIcon : themeToggle.dataset.moonIcon;
+  localStorage.setItem("theme", theme);
   toggleGiscusTheme(theme);
 }
 
 function switchTheme() {
   let name = localStorage.getItem("scheme");
+
+  document.body.classList.remove(name);
 
   switch (name) {
     case null:
@@ -41,11 +43,9 @@ function switchTheme() {
       name = "onedark";
   }
 
-  let scheme = document.querySelector('#scheme');
-  scheme.href = `/${name}.css`;
+  document.body.classList.add(name);
 
-  let syntax = document.querySelector('#syntax');
-  syntax.href = `/${name}-syntax.css`;
+  if (syntaxCSS) syntaxCSS.href = `/${name}-syntax.css`;
 
   localStorage.setItem("scheme", name);
 }
