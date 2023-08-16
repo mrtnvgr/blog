@@ -15,7 +15,6 @@ body {
   --paragraph-font-size: 18px;
   --paragraph-line-height: 1.75;
   --img-border-radius: 4px;
-  --code-border-radius: 4px;
 }
 
 /* base
@@ -470,7 +469,7 @@ body.post {
     pre {
       padding: 12px 48px 12px 16px;
       line-height: 1.5;
-      border-radius: var(--code-border-radius);
+      border: 1.5px solid var(--primary-color);
       overflow: auto;
       font-size: 0.8em;
 
