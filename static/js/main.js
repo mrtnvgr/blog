@@ -78,7 +78,7 @@ if (document.body.classList.contains('post')) {
       if (block.classList.contains('mermaid')) return;
 
       const wrapper = document.createElement('div');
-      wrapper.className = 'code-block';
+      wrapper.className = 'codeblock';
 
       const btn = document.createElement('button');
       btn.className = 'copy';
