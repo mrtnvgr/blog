@@ -39,6 +39,9 @@ function switchTheme() {
     case "everforest":
       name = "everblush";
       break;
+    case "everblush":
+      name = "rose-pine";
+      break;
     default:
       name = "onedark";
   }

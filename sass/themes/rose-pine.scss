@@ -1,0 +1,27 @@
+@use 'colors' with (
+  $theme: "rose-pine",
+
+  $dark-background: #191724, // base
+  $dark-foreground: #e0def4, // text
+  $dark-foreground-pale: #6e6a86, // muted
+
+  $light-background: #faf4ed, // base
+  $light-foreground: #575279, // text
+  $light-foreground-pale: #9893a5, // muted
+
+  $dark-primary: #c4a7e7, // iris
+  $dark-red: #eb6f92, // love
+  $dark-blue: #31748f, // pine
+  $dark-sky: #ebbcba, // rose
+  $dark-purple: #c4a7e7, // iris
+  $dark-green: #9ccfd8, // foam
+  $dark-yellow: #f6c177, // gold
+
+  $light-primary: #907aa9, // iris
+  $light-red: #b4637a, // love
+  $light-blue: #286983, // pine
+  $light-sky: #d7827e, // rose
+  $light-purple: #907aa9, // iris
+  $light-green: #286983, // foam
+  $light-yellow: #ea9d34, // gold
+);

@@ -20,6 +20,7 @@ highlight_themes_css = [
   { theme = "catppuccin-mocha", filename = "catppuccin-syntax.css" },
   { theme = "everforest", filename = "everforest-syntax.css" },
   { theme = "everblush", filename = "everblush-syntax.css" },
+  { theme = "rose-pine", filename = "rose-pine-syntax.css" },
 ]
 render_emoji = false
 external_links_target_blank = false

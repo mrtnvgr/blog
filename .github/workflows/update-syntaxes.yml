@@ -35,6 +35,7 @@ jobs:
           wget https://raw.githubusercontent.com/catppuccin/vscode/compiled/mocha.json -O catppuccin-mocha.json
           wget https://raw.githubusercontent.com/sainnhe/everforest-vscode/master/themes/everforest-dark.json -O everforest.json
           wget https://raw.githubusercontent.com/Everblush/vscode/master/themes/everblush-color-theme.json -O everblush.json
+          wget https://raw.githubusercontent.com/rose-pine/vscode/main/themes/rose-pine-no-italics-color-theme.json -O rose-pine.json
 
       - name: "Convert to .tmTheme"
         run: |
