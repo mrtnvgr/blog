@@ -3,7 +3,7 @@
 
   $dark-background: #2e3440,
   $dark-foreground: #eceff4,
-  $dark-foreground-pale: #4c566a,
+  $dark-foreground-pale: #d8dee9,
 
   $light-background: #eceff4,
   $light-foreground: #2e3440,
@@ -17,9 +17,3 @@
   $dark-green: #a3be8c,
   $dark-yellow: #ebcb8b,
 );
-
-body.nord {
-  .z-code {
-    background-color: #3b4252 !important;
-  }
-}

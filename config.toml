@@ -10,18 +10,7 @@ generate_feed = true
 feed_filename = "feed.xml"
 
 [markdown]
-highlight_code = true
-extra_syntaxes_and_themes = ["syntaxes"]
-highlight_theme = "css"
-highlight_themes_css = [
-  { theme = "onedark", filename = "onedark-syntax.css" },
-  { theme = "dracula", filename = "dracula-syntax.css" },
-  { theme = "nord", filename = "nord-syntax.css" },
-  { theme = "catppuccin-mocha", filename = "catppuccin-syntax.css" },
-  { theme = "everforest", filename = "everforest-syntax.css" },
-  { theme = "everblush", filename = "everblush-syntax.css" },
-  { theme = "rose-pine", filename = "rose-pine-syntax.css" },
-]
+highlight_code = false
 render_emoji = false
 external_links_target_blank = false
 external_links_no_follow = true

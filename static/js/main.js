@@ -48,7 +48,7 @@ function switchTheme() {
 
   document.body.classList.add(name);
 
-  if (syntaxCSS) syntaxCSS.href = `/${name}-syntax.css`;
+  if (syntaxCSS) syntaxCSS.href = `/prism/themes/${name}.css`;
 
   localStorage.setItem("scheme", name);
 }
