@@ -11,7 +11,7 @@ body {
   --main-font: "Signika", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --code-font: "Cascadia Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --homepage-max-width: 650px;
-  --main-max-width: 820px;
+  --main-max-width: 860px;
   --avatar-size: 70px;
   --paragraph-font-size: 18px;
   --paragraph-line-height: 1.75;
@@ -104,10 +104,27 @@ body.homepage {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-    }
 
-    #bio {
-      font-size: 0.85em;
+      #center {
+        display: flex;
+        gap: 0.5em;
+
+        margin: 0 auto;
+
+        a, svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        a, svg {
+          text-decoration: none;
+          color: var(--text-color);
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
     }
   }
 
@@ -156,18 +173,6 @@ body.homepage {
         border: none;
         background-color: transparent;
         cursor: pointer;
-      }
-    }
-
-    #center {
-      display: flex;
-      gap: 0.5em;
-
-      margin-left: auto;
-
-      a {
-        width: 24px;
-        height: 24px;
       }
     }
 
@@ -373,8 +378,7 @@ body.post {
   }
 
   article {
-    // NOTE: set to "0 15px 30px" for footer
-    padding: 0 15px 0;
+    padding: 0 15px 30px;
     font-size: var(--paragraph-font-size);
 
     #post-info {
@@ -398,21 +402,18 @@ body.post {
     }
 
     h1 {
-      font-size: 1.5em;
-      font-weight: bolder;
+      font-size: 1.7em;
+      font-weight: 600;
       margin: 1em 0 0.5em 0;
     }
 
     h2 {
-      font-size: 1.3em;
-      padding-top: 65px;
-      margin-top: -45px;
+      font-size: 1.5em;
+      margin: 2em 0 1em 0;
     }
 
     h3 {
       font-size: 1.1em;
-      padding-top: 65px;
-      margin-top: -45px;
     }
 
     h4 {

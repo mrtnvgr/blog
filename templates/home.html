@@ -17,7 +17,15 @@
         <div>
           <span id="name">{{ config.extra.name }}</span>
         </div>
-        <div id="bio"> {{ config.extra.bio }} </div>
+        <div id="center">
+          {% for link in config.extra.links -%}
+          <a href="{{ link.url }}" aria-label="{{ link.name }}" target="_blank" rel='noreferrer noopener'>
+            {% set icon_path = "static/icon/" ~ link.icon ~ ".svg" %}
+            {% set icon = load_data(path=icon_path) %}
+            {{ icon | safe }}
+          </a>
+          {% endfor %}
+        </div>
       </div>
     </section>
     <section id="links">
@@ -36,17 +44,6 @@
     </section>
     <section id="brief">
       {{ section.content | trim | safe }}
-    </section>
-    <section id="links">
-      <div id="center">
-        {% for link in config.extra.links -%}
-        <a href="{{ link.url }}" aria-label="{{ link.name }}" target="_blank" rel='noreferrer noopener'>
-          {% set icon_path = "static/icon/" ~ link.icon ~ ".svg" %}
-          {% set icon = load_data(path=icon_path) %}
-          {{ icon | safe }}
-        </a>
-        {% endfor %}
-      </div>
     </section>
   </main>
 </div>
