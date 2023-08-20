@@ -68,6 +68,11 @@ button:focus, a:focus {
   outline: 1px solid transparent;
 }
 
+::selection {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
 /* homepage
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
