@@ -40,6 +40,9 @@ function switchTheme() {
     case "everblush":
       name = "rose-pine";
       break;
+    case "rose-pine":
+      name = "gruvbox";
+      break;
     default:
       name = "onedark";
   }
