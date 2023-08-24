@@ -39,6 +39,8 @@ Specify your preferred AUR packages:
 packages: |
   <foo-bin>
   <bar>
+devel_packages: |
+  # Nightly packages
   <baz-git>
 ```
 {% end %}
