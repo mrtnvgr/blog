@@ -1,14 +1,12 @@
 const themeToggle = document.querySelector('#theme-toggle');
 const themeSwitch = document.querySelector('#theme-switch');
 const syntaxCSS = document.querySelector("link#syntax");
-const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-if (!localStorage.getItem("theme") && preferDark.matches) toggleTheme("dark");
+if (!localStorage.getItem("theme")) toggleTheme("dark");
 if (localStorage.getItem("theme") == "dark") toggleTheme("dark");
 
 themeToggle.addEventListener('click', () => toggleTheme(localStorage.getItem("theme") == "dark" ? "light" : "dark"));
 themeSwitch.addEventListener('click', () => switchTheme());
-preferDark.addEventListener("change", e => toggleTheme(e.matches ? "dark" : "light"));
 
 function toggleTheme(theme) {
   if (theme == "dark") document.body.classList.add('dark'); else document.body.classList.remove('dark');
@@ -60,7 +58,7 @@ function toggleGiscusTheme(theme) {
 
 window.addEventListener('message', initGiscusTheme);
 function initGiscusTheme() {
-  toggleGiscusTheme(localStorage.getItem("theme") || (preferDark.matches ? "dark" : "light"));
+  toggleGiscusTheme(localStorage.getItem("theme") || "dark");
   window.removeEventListener('message', initGiscusTheme);
 }
 
