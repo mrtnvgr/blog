@@ -34,7 +34,7 @@ links = [
   { name = "Email", icon = "email", url = "mailto:root@unixis.fun" },
 ]
 
-default_theme = "catppuccin"
+default_theme = "rose-pine"
 
 nav_separator = "::"
 date_format = "%e %B %Y"
