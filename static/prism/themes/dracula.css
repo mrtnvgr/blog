@@ -1,0 +1,188 @@
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  background: #282a36;
+}
+
+.language-css {
+  color: #bd93f9;
+}
+
+.token {
+  color: #ff79c6;
+}
+
+.language-css .token {
+  color: #ff79c6;
+}
+
+.token.script {
+  color: #f8f8f2;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.atrule,
+.token.attr-name,
+.token.attr-value {
+  color: #50fa7b;
+}
+
+.language-css .token.atrule {
+  color: #bd93f9;
+}
+
+.language-html .token.attr-value,
+.language-markup .token.attr-value {
+  color: #f1fa8c;
+}
+
+.token.boolean {
+  color: #bd93f9;
+}
+
+.token.builtin,
+.token.class-name {
+  color: #8be9fd;
+}
+
+.token.comment {
+  color: #6272a4;
+}
+
+.token.constant {
+  color: #bd93f9;
+}
+
+.language-javascript .token.constant {
+  color: #ffb86c;
+  font-style: italic;
+}
+
+.token.entity {
+  color: #ff79c6;
+}
+
+.language-css .token.entity {
+  color: #50fa7b;
+}
+
+.language-html .token.entity.named-entity {
+  color: #bd93f9;
+}
+
+.language-html .token.entity:not(.named-entity) {
+  color: #ff79c6;
+}
+
+.language-markup .token.entity.named-entity {
+  color: #bd93f9;
+}
+
+.language-markup .token.entity:not(.named-entity) {
+  color: #ff79c6;
+}
+
+.token.function {
+  color: #50fa7b;
+}
+
+.language-css .token.function {
+  color: #8be9fd;
+}
+
+.token.important,
+.token.keyword {
+  color: #ff79c6;
+}
+
+.token.prolog {
+  color: #f8f8f2;
+}
+
+.token.property {
+  color: #ffb86c;
+}
+
+.language-css .token.property {
+  color: #8be9fd;
+}
+
+.token.punctuation {
+  color: #ff79c6;
+}
+
+.language-css .token.punctuation {
+  color: #ffb86c;
+}
+
+.language-html .token.punctuation,
+.language-markup .token.punctuation {
+  color: #f8f8f2;
+}
+
+.token.selector {
+  color: #ff79c6;
+}
+
+.language-css .token.selector {
+  color: #50fa7b;
+}
+
+.token.regex {
+  color: #ff5555;
+}
+
+.language-css .token.rule:not(.atrule) {
+  color: #f8f8f2;
+}
+
+.token.string {
+  color: #f1fa8c;
+}
+
+.token.tag {
+  color: #ff79c6;
+}
+
+.token.url {
+  color: #8be9fd;
+}
+
+.language-css .token.url {
+  color: #ffb86c;
+}
+
+.token.variable {
+  color: #6272a4;
+}
+
+.token.number {
+  color: rgba(189, 147, 249, 1);
+}
+
+.token.operator {
+  color: rgba(139, 233, 253, 1);
+}
+
+.token.char {
+  color: rgba(255, 135, 157, 1);
+}
+
+.token.symbol {
+  color: rgba(255, 184, 108, 1);
+}
+
+.token.deleted {
+  color: #e2777a;
+}
+
+.token.namespace {
+  color: #e2777a;
+}
