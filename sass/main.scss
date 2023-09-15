@@ -17,6 +17,7 @@ body {
   --paragraph-font-size: 18px;
   --paragraph-line-height: 1.75;
   --img-border-radius: 0px;
+  --inline-code-border-radius: 2px;
 }
 
 /* prose
@@ -91,10 +92,44 @@ body {
   }
 
   blockquote {
-    border-left: 4px var(--primary-pale-color) solid;
+    border-left: 3px var(--primary-pale-color) solid;
     padding-left: 16px;
     margin: 0 0 24px 0;
     color: var(--text-pale-color);
+  }
+
+  ul,
+  ol {
+    line-height: 1.8;
+  }
+
+  li::marker {
+    color: var(--primary-color);
+  }
+
+  hr {
+    border: none;
+    background-color: var(--primary-pale-color);
+    height: 3px;
+    margin: 36px 0;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid var(--primary-pale-color);
+  }
+
+  thead {
+    background-color: var(--primary-pale-color);
+  }
+
+  th,
+  td {
+    line-height: 2;
+    text-align: center;
+    border: 1px solid var(--primary-pale-color);
+    padding: 1px 10px;
   }
 
   p>code, td>code, th>code {
@@ -104,7 +139,7 @@ body {
     margin: 0 2px;
     color: var(--primary-color);
     background-color: var(--primary-pale-color);
-    border-radius: 2px;
+    border-radius: var(--inline-code-border-radius);
   }
 
   pre {
@@ -230,40 +265,6 @@ body {
     }
   }
 
-  ul,
-  ol {
-    line-height: 1.8;
-  }
-
-  li::marker {
-    color: var(--primary-color);
-  }
-
-  hr {
-    border: none;
-    background-color: var(--primary-pale-color);
-    height: 3px;
-    margin: 36px 0;
-  }
-
-  table {
-    width: 100%;
-    border-spacing: 0;
-    border: 1px solid var(--primary-pale-color);
-  }
-
-  thead {
-    background-color: var(--primary-pale-color);
-  }
-
-  th,
-  td {
-    line-height: 2;
-    text-align: center;
-    border: 1px solid var(--primary-pale-color);
-    padding: 1px 10px;
-  }
-
   .footnote-definition {
     display: flex;
 
@@ -293,7 +294,7 @@ body {
     }
   }
 
-  blockquote.callout {
+  .callout {
     line-height: inherit;
     margin-bottom: 20px;
     border: 1.5px solid var(--primary-color);
@@ -347,6 +348,10 @@ body {
       border-color: var(--callout-tip-color);
     }
   }
+
+  .mermaid {
+    background: #fff;
+  }
 }
 
 /* prose pages
@@ -363,13 +368,11 @@ body.prose-page {
     flex-direction: column;
     justify-content: space-between;
   }
+
   article {
     padding: 90px 15px 30px;
     font-size: var(--paragraph-font-size);
     line-height: var(--paragraph-line-height);
-  }
-  .mermaid {
-    background: #fff;
   }
 }
 
@@ -394,15 +397,20 @@ html {
   overflow-y: overlay;
 }
 
-@media screen and (min-width: 425px) {
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
+::selection {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
 
+@media screen and (min-width: 425px) {
   body::-webkit-scrollbar {
     width: 6px;
     height: 6px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
   }
 
   ::-webkit-scrollbar-track {
@@ -421,11 +429,6 @@ html {
 
 button:focus, a:focus {
   outline: 1px solid transparent;
-}
-
-::selection {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
 }
 
 /* layout blog list
@@ -636,7 +639,7 @@ header {
     display: flex;
     gap: 1em;
     align-items: center;
-    padding-top: 1px;
+    padding-top: 1.5px;
 
     a,
     button {
