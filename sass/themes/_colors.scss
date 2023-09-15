@@ -5,6 +5,7 @@ $dark-foreground: none !default;
 $dark-foreground-pale: none !default;
 
 $dark-primary: none !default;
+$dark-primary-pale: rgba($dark-primary, 0.2) !default;
 $dark-red: none !default;
 $dark-blue: none !default;
 $dark-sky: $dark-blue !default;
@@ -17,6 +18,7 @@ $light-foreground: none !default;
 $light-foreground-pale: none !default;
 
 $light-primary: $dark-primary !default;
+$light-primary-pale: rgba($light-primary, 0.2) !default;
 $light-red: $dark-red !default;
 $light-blue: $dark-blue !default;
 $light-sky: $dark-sky !default;
@@ -26,7 +28,7 @@ $light-yellow: $dark-yellow !default;
 
 body.#{$theme} {
   --primary-color: #{$light-primary};
-  --primary-pale-color: #{$light-primary}20;
+  --primary-pale-color: #{$light-primary-pale};
   --text-color: #{$light-foreground};
   --text-pale-color: #{$light-foreground-pale};
   --bg-color: #{$light-background};
@@ -40,7 +42,7 @@ body.#{$theme} {
 
   &.dark {
     --primary-color: #{$dark-primary};
-    --primary-pale-color: #{$dark-primary}20;
+    --primary-pale-color: #{$dark-primary-pale};
     --text-color: #{$dark-foreground};
     --text-pale-color: #{$dark-foreground-pale};
     --bg-color: #{$dark-background};
