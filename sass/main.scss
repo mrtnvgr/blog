@@ -349,6 +349,30 @@ body {
   }
 }
 
+/* prose pages
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body.prose-page {
+  main {
+    font-size: var(--paragraph-font-size);
+    margin-top: 45px;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: var(--main-max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  article {
+    padding: 90px 15px 30px;
+    font-size: var(--paragraph-font-size);
+    line-height: var(--paragraph-line-height);
+  }
+  .mermaid {
+    background: #fff;
+  }
+}
+
 /* base
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -460,8 +484,7 @@ body.homepage {
   }
 
   #links {
-    max-height: 24px;
-    margin: 1.25em 0 1.5em;
+    margin: 1.25em 0 1.75em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -481,6 +504,7 @@ body.homepage {
 
     #left {
       display: flex;
+      flex-wrap: wrap;
       gap: 1em;
 
       a {
@@ -492,6 +516,7 @@ body.homepage {
     #right {
       display: flex;
       gap: 0.5em;
+      margin-left: auto;
 
       a,
       button {
@@ -532,7 +557,7 @@ header {
   background-color: var(--bg-color);
   border-bottom: 1.5px solid var(--primary-color);
 
-  #wrapper {
+  #header-wrapper {
     height: 100%;
     max-width: var(--main-max-width);
     margin: 0 auto;
@@ -590,7 +615,7 @@ header {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body.blog {
-  #blog-wrapper {
+  #wrapper {
     margin: 0 auto;
     max-width: var(--main-max-width);
     min-height: 100vh;
@@ -642,7 +667,7 @@ body.blog {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body.post {
-  #post-wrapper {
+  #wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 45px;
