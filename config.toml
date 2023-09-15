@@ -34,6 +34,10 @@ links = [
   { name = "Email", icon = "email", url = "mailto:root@unixis.fun" },
 ]
 
+sections = [
+  { name = "blog", path = "/blog" },
+]
+
 default_theme = "rose-pine"
 
 nav_separator = "::"

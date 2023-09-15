@@ -30,7 +30,9 @@
     </section>
     <section id="links">
       <div id="left">
-        <a href="/blog" id="blog">blog</a>
+        {% for section in config.extra.sections %}
+        <a href="{{ section.path }}"  {% if section.is_external %}target="_blank" rel='noreferrer noopener'{% endif %}>{{ section.name }}</a>
+        {% endfor %}
       </div>
       <div id="right">
         {% set moon_icon = load_data(path="static/icon/moon.svg") %}
