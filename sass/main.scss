@@ -366,8 +366,8 @@ body {
 body.prose-page {
   main {
     font-size: var(--paragraph-font-size);
-    margin-top: 45px;
     min-height: 100vh;
+    padding-top: 45px;
     margin: 0 auto;
     max-width: var(--main-max-width);
     display: flex;
@@ -376,7 +376,7 @@ body.prose-page {
   }
 
   article {
-    padding: 90px 15px 30px;
+    padding: 45px 15px 30px;
     font-size: var(--paragraph-font-size);
     line-height: var(--paragraph-line-height);
   }
@@ -692,16 +692,19 @@ body.post {
   #wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 45px;
     font-size: 18px;
-    min-height: 100vh;
   }
 
   main {
     order: 2;
     width: 100%;
     margin: 0 auto;
+    padding-top: 45px;
     max-width: var(--main-max-width);
+    min-height: 100vh;
+    display: flex;
+    flex-column: column;
+    justify-content: space-between;
   }
 
   article {

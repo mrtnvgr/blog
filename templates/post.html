@@ -47,25 +47,27 @@
 {% include "_header.html" %}
 <div id="wrapper">
   <main>
-    {% set copy_icon = load_data(path="static/icon/copy.svg") %}
-    {% set check_icon = load_data(path="static/icon/check.svg") %}
-    <div id="copy-cfg" style="display: none;" data-copy-icon="{{ copy_icon }}" data-check-icon="{{ check_icon }}"></div>
+    <div>
+      {% set copy_icon = load_data(path="static/icon/copy.svg") %}
+      {% set check_icon = load_data(path="static/icon/check.svg") %}
+      <div id="copy-cfg" style="display: none;" data-copy-icon="{{ copy_icon }}" data-check-icon="{{ check_icon }}"></div>
 
-    {% set backlink_icon = load_data(path="static/icon/backlink.svg") %}
-    <article class="prose" data-backlink-icon="{{ backlink_icon }}">
-      <h1>{{ page.title }}</h1>
+      {% set backlink_icon = load_data(path="static/icon/backlink.svg") %}
+      <article class="prose" data-backlink-icon="{{ backlink_icon }}">
+        <h1>{{ page.title }}</h1>
 
-      <div id="post-info">
-        <div id="date">
-          <span id="publish">{{ page.date | date(format=config.extra.date_format) }}</span>
-          {% if page.updated and page.updated != page.date -%}
-          <span>Updated on <span id="updated">{{ page.updated | date(format=config.extra.date_format) }}</span></span>
-          {% endif -%}
+        <div id="post-info">
+          <div id="date">
+            <span id="publish">{{ page.date | date(format=config.extra.date_format) }}</span>
+            {% if page.updated and page.updated != page.date -%}
+            <span>Updated on <span id="updated">{{ page.updated | date(format=config.extra.date_format) }}</span></span>
+            {% endif -%}
+          </div>
         </div>
-      </div>
 
-      {{ page.content | safe }}
-    </article>
+        {{ page.content | safe }}
+      </article>
+    </div>
   </main>
 </div>
 {% endblock content %}
