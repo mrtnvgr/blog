@@ -689,12 +689,13 @@ body.post {
   }
 
   #blank {
-    flex-grow: 1;
-    flex-basis: 0;
+    position: sticky;
+    width: calc((100% - var(--main-max-width)) / 2);
   }
 
   main {
     width: 100%;
+    margin: 0 auto;
     max-width: var(--main-max-width);
   }
 
