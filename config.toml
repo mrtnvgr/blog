@@ -42,3 +42,7 @@ default_theme = "rose-pine"
 
 nav_separator = "::"
 date_format = "%e %B %Y"
+
+not_found_title = "404 | Not Found"
+not_found_error_text = "Not Found"
+not_found_recover_text = "« back to home »"
