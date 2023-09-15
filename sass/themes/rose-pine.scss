@@ -1,4 +1,4 @@
-@use 'colors' with (
+@use "base" with (
   $theme: "rose-pine",
 
   $dark-background: #191724, // base

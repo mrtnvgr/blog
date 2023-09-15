@@ -1,4 +1,4 @@
-@use 'colors' with (
+@use "base" with (
   $theme: "gruvbox",
 
   $dark-background: #1d2021, // bg0_h
