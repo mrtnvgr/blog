@@ -46,7 +46,6 @@
 {% block content %}
 {% include "_header.html" %}
 <div id="wrapper">
-  <div id="blank"></div>
   <main>
     {% set copy_icon = load_data(path="static/icon/copy.svg") %}
     {% set check_icon = load_data(path="static/icon/check.svg") %}
@@ -68,7 +67,6 @@
       {{ page.content | safe }}
     </article>
   </main>
-  <div id="blank"></div>
 </div>
 {% endblock content %}
 

@@ -686,12 +686,6 @@ body.post {
     min-height: 100vh;
   }
 
-  #blank {
-    order: 1;
-    position: sticky;
-    width: calc((100% - var(--main-max-width)) / 2);
-  }
-
   main {
     order: 2;
     width: 100%;
@@ -730,10 +724,6 @@ body.post {
   }
 
   @media screen and (max-width: 1024px) {
-    #blank {
-      display: none;
-    }
-
     main {
       margin: 0 auto;
     }
