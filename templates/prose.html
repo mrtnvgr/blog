@@ -10,9 +10,11 @@
 {% endblock desc %}
 
 {% block head %}
-{% if config.markdown.highlight_theme == "css" %}
-<link id="hl" rel="stylesheet" type="text/css" href="/hl-light.css" />
-{% endif %}
+<script>
+  const name = localStorage.getItem("scheme") ?? "{{ config.extra.default_theme }}";
+  document.head.innerHTML += `<link id="syntax" rel="stylesheet" href="/prism/themes/${name}.css"/>`;
+</script>
+
 {% if section.extra.math %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
@@ -38,30 +40,22 @@
 <div id="wrapper">
   <main>
     <div>
-      {% if section.extra.copy is defined %}{% set allow_copy = section.extra.copy %}{% else %}{% set allow_copy = config.extra.copy %}{% endif %}
-      {% if allow_copy %}
       {% set copy_icon = load_data(path="static/icon/copy.svg") %}
       {% set check_icon = load_data(path="static/icon/check.svg") %}
       <div id="copy-cfg" style="display: none;" data-copy-icon="{{ copy_icon }}" data-check-icon="{{ check_icon }}"></div>
-      {% endif %}
+
       {% set backlink_icon = load_data(path="static/icon/backlink.svg") %}
       <article class="prose" data-backlink-icon="{{ backlink_icon }}">
         {{ section.content | safe }}
       </article>
-
-      {% if section.extra.comment is defined %}{% set show_comment = section.extra.comment %}{% else %}{% set show_comment = config.extra.comment %}{% endif %}
-      {% if show_comment %}
-      <div class="giscus"></div>
-      {% include "_giscus_script.html" %}
-      {% endif %}
-
-      {% include "_footer.html" %}
     </div>
   </main>
 </div>
 {% endblock content %}
 
 {% block script %}
+<script src="/prism/prism.js"></script>
+
 <script src="/js/lightense.min.js"></script>
 {% if section.extra.mermaid %}
 <script type="module">
