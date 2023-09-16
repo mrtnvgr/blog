@@ -20,6 +20,61 @@ body {
   --inline-code-border-radius: 2px;
 }
 
+/* base
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: overlay;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+@media screen and (min-width: 425px) {
+  body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #aeb7caa1;
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8a90a1a1;
+  }
+}
+
+button:focus, a:focus {
+  outline: 1px solid transparent;
+}
+
 /* prose
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -380,61 +435,6 @@ body.prose-page {
     font-size: var(--paragraph-font-size);
     line-height: var(--paragraph-line-height);
   }
-}
-
-/* base
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100%;
-  font-family: var(--main-font);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-y: overlay;
-}
-
-::selection {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-}
-
-@media screen and (min-width: 425px) {
-  body::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #0000;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #aeb7caa1;
-    border-radius: 0px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #8a90a1a1;
-  }
-}
-
-button:focus, a:focus {
-  outline: 1px solid transparent;
 }
 
 /* layout blog list
