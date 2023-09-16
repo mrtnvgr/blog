@@ -695,8 +695,12 @@ body.post {
     font-size: 18px;
   }
 
+  #blank {
+    position: sticky;
+    width: calc((100% - var(--main-max-width)) / 2);
+  }
+
   main {
-    order: 2;
     width: 100%;
     margin: 0 auto;
     padding-top: 45px;
@@ -738,6 +742,10 @@ body.post {
   }
 
   @media screen and (max-width: 1024px) {
+    #blank {
+      display: none;
+    }
+
     main {
       margin: 0 auto;
     }
