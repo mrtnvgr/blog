@@ -1,11 +1,12 @@
 base_url = "https://unixis.fun"
-title = "UNIX/POSIX/UNIX-LIKE/LSB is fun"
-description = ""
+title = "mrtnvgr::home"
+description = "Egor`s personal website"
 default_language = "en"
 output_dir = "public"
 compile_sass = true
 minify_html = true
 build_search_index = false
+
 generate_feed = true
 feed_filename = "feed.xml"
 
