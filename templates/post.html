@@ -62,7 +62,7 @@
             <span id="publish">{{ page.date | date(format=config.extra.date_format) }}</span>
             {% if page.updated and page.updated != page.date -%}
             <span>Updated on <span id="updated">{{ page.updated | date(format=config.extra.date_format) }}</span></span>
-            {% endif -%}
+            {% endif %}
           </div>
         </div>
 
