@@ -1,57 +1,57 @@
-$theme: none !default;
+@mixin theme($theme,
 
-$dark-background: none !default;
-$dark-foreground: none !default;
-$dark-foreground-pale: none !default;
+             $dark-background,
+             $dark-foreground,
+             $dark-foreground-pale,
 
-$dark-primary: none !default;
-$dark-primary-pale: rgba($dark-primary, 0.2) !default;
-$dark-red: none !default;
-$dark-blue: none !default;
-$dark-sky: $dark-blue !default;
-$dark-purple: none !default;
-$dark-green: none !default;
-$dark-yellow: none !default;
+             $dark-primary,
+             $dark-primary-pale: rgba($dark-primary, 0.2),
+             $dark-red,
+             $dark-blue,
+             $dark-sky: $dark-blue,
+             $dark-purple,
+             $dark-green,
+             $dark-yellow,
 
-$light-background: none !default;
-$light-foreground: none !default;
-$light-foreground-pale: none !default;
+             $light-background,
+             $light-foreground,
+             $light-foreground-pale,
 
-$light-primary: $dark-primary !default;
-$light-primary-pale: rgba($light-primary, 0.2) !default;
-$light-red: $dark-red !default;
-$light-blue: $dark-blue !default;
-$light-sky: $dark-sky !default;
-$light-purple: $dark-purple !default;
-$light-green: $dark-green !default;
-$light-yellow: $dark-yellow !default;
+             $light-primary: $dark-primary,
+             $light-primary-pale: rgba($light-primary, 0.2),
+             $light-red: $dark-red,
+             $light-blue: $dark-blue,
+             $light-sky: $dark-sky,
+             $light-purple: $dark-purple,
+             $light-green: $dark-green,
+             $light-yellow: $dark-yellow) {
+  body.#{$theme} {
+    --primary-color: #{$light-primary};
+    --primary-pale-color: #{$light-primary-pale};
+    --text-color: #{$light-foreground};
+    --text-pale-color: #{$light-foreground-pale};
+    --bg-color: #{$light-background};
 
-body.#{$theme} {
-  --primary-color: #{$light-primary};
-  --primary-pale-color: #{$light-primary-pale};
-  --text-color: #{$light-foreground};
-  --text-pale-color: #{$light-foreground-pale};
-  --bg-color: #{$light-background};
+    --callout-note-color: #{$light-blue};
+    --callout-important-color: #{$light-purple};
+    --callout-warning-color: #{$light-yellow};
+    --callout-alert-color: #{$light-red};
+    --callout-question-color: #{$light-sky};
+    --callout-tip-color: #{$light-green};
 
-  --callout-note-color: #{$light-blue};
-  --callout-important-color: #{$light-purple};
-  --callout-warning-color: #{$light-yellow};
-  --callout-alert-color: #{$light-red};
-  --callout-question-color: #{$light-sky};
-  --callout-tip-color: #{$light-green};
+    &.dark {
+      --primary-color: #{$dark-primary};
+      --primary-pale-color: #{$dark-primary-pale};
+      --text-color: #{$dark-foreground};
+      --text-pale-color: #{$dark-foreground-pale};
+      --bg-color: #{$dark-background};
 
-  &.dark {
-    --primary-color: #{$dark-primary};
-    --primary-pale-color: #{$dark-primary-pale};
-    --text-color: #{$dark-foreground};
-    --text-pale-color: #{$dark-foreground-pale};
-    --bg-color: #{$dark-background};
-
-    --callout-note-color: #{$dark-blue};
-    --callout-important-color: #{$dark-purple};
-    --callout-warning-color: #{$dark-yellow};
-    --callout-alert-color: #{$dark-red};
-    --callout-question-color: #{$dark-sky};
-    --callout-tip-color: #{$dark-green};
+      --callout-note-color: #{$dark-blue};
+      --callout-important-color: #{$dark-purple};
+      --callout-warning-color: #{$dark-yellow};
+      --callout-alert-color: #{$dark-red};
+      --callout-question-color: #{$dark-sky};
+      --callout-tip-color: #{$dark-green};
+    }
   }
 }

@@ -1,4 +1,6 @@
-@use "base" with (
+@import "base";
+
+@include theme(
   $theme: "nord",
 
   $dark-background: #2e3440,

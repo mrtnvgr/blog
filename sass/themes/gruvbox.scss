@@ -1,4 +1,6 @@
-@use "base" with (
+@import "base";
+
+@include theme(
   $theme: "gruvbox",
 
   $dark-background: #1d2021, // bg0_h

@@ -1,4 +1,6 @@
-@use 'base' with (
+@import "base";
+
+@include theme(
   $theme: "everforest",
 
   $dark-background: #1e2326, // bg_dim

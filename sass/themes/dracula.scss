@@ -1,4 +1,6 @@
-@use "base" with (
+@import "base";
+
+@include theme(
   $theme: "dracula",
 
   $dark-background: #21222c,

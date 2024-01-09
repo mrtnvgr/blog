@@ -1,4 +1,6 @@
-@use "base" with (
+@import "base";
+
+@include theme(
   $theme: "rose-pine",
 
   $dark-background: #191724, // base
